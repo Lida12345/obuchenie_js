@@ -1,45 +1,80 @@
-/* Задание на урок:
+"use strict";
+/* урок16 */
+let num = 20;
 
-1) Создать переменную numberOfFilms и в неё поместить ответ от пользователя на вопрос:
-'Сколько фильмов вы уже посмотрели?'
+function showFirstMessage(text) {
+    console.log(text);
+    console.log(num);
+}
 
-2) Создать объект personalMovieDB и в него поместить такие свойства:
-    - count - сюда передается ответ на первый вопрос
-    - movies - в это свойство поместить пустой объект
-    - actors - тоже поместить пустой объект
-    - genres - сюда поместить пустой массив
-    - privat - в это свойство поместить boolean(логическое) значение false
+showFirstMessage("Hello World!");
+console.log(num);
 
-3) Задайте пользователю по два раза вопросы:
-    - 'Один из последних просмотренных фильмов?'
-    - 'На сколько оцените его?'
-Ответы стоит поместить в отдельные переменные
-Записать ответы в объект movies в формате: 
-    movies: {
-        'logan': '8.1'
-    }
 
-Проверить, чтобы все работало без ошибок в консоли */
+/*console.log(calc(4, 3));
+console.log(calc(5, 6));
+console.log(calc(10, 6));
 
-const numberOfFilms = +prompt('Сколько фильмов вы уже посмотрели?', ''); 
+function calc(a, b) {
+    return (a + b);
+}*/
 
-const personalMovieDB = {
-   count: numberOfFilms,
-   movies: {},
-   actors: {},
-   genres: [],
-   privat: false
+
+
+function ret() {
+    let num = 50;
+    return num;
+}
+
+const anotherNum = ret();
+console.log(anotherNum);
+
+const logger = function() {
+    console.log("Hello");
 };
 
-const a = prompt('Один из последних просмотренных фильмов?', ''),
-      b = prompt('На сколько оцените его?', ''),
-      c = prompt('Один из последних просмотренных фильмов?', ''),
-      d = prompt('На сколько оцените его?', '');
+logger();
 
-      personalMovieDB.movies[a] = b;
-      personalMovieDB.movies[c] = d;
 
-      console.log(personalMovieDB);
+const calc = (a, b) => {
+    console.log ('1');
+    return a + b;
+};
+
+/* урок 17 */
+
+const str = "teSt";
+
+//console.log(str[2] = 'd');
+
+//console.log(str.toUpperCase());
+console.log(str.toLowerCase());
+console.log(str);
+
+const fruit = "Some fruit";
+
+console.log(fruit.indexOf("q"));
+
+const logg = "Hello world";
+
+//console.log(logg.slice(6, 11));
+
+//console.log(logg.substring(6, 11));
+
+console.log(logg.substr(6, 5));
+
+const num = 12.2;
+console.log(Math.round(num));
+
+const test = "12.2px";
+//console.log(parseInt(test));
+console.log(parseFloat(test));
+
+
+
+
+
+
 
 
 
